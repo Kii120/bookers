@@ -29,9 +29,33 @@ body {
   margin: 33px;
 }
 
-p {
+p, td, ol, ul {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
   margin: 33px;
+}
+
+th {
+  padding-bottom: 5px;
+}
+
+.field,
+.actions {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+}
+
+.error_message {
+  margin-top: 10px;
+  color: red;
+}
+
+td {
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-right: 5px; 
 }

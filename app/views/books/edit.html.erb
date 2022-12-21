@@ -1,13 +1,32 @@
 <h1>Editing Book</h1>
+
+<div class="error_message">
+<% if @book.errors.any? %>
+  <%= @book.errors.count %> errors was found.
+  <ul>
+    
+    <% @book.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+</div>
+
 <%= form_with model: @book do |f| %>
+<div class="field">
   <label>Title</label>
   <%= f.text_field :title %>
-  <label>Body</lavel>
+</div>
+<div class="field">
+  <label>Body</label>
   <%= f.text_area :body %>
+</div class="field">
+<div class="actions">
   <%= f.submit 'Update Book' %>
+</div>
 <% end %>
 
 <%= link_to 'Show', book_path(@book.id) %>
 |
-<%= link_to 'Back', book_path %>
+<%= link_to 'Back', '/books' %>
 
